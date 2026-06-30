@@ -1,20 +1,13 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
-import { motion } from 'framer-motion';
 
 export default function Navbar() {
   return (
-    <motion.nav 
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ type: "spring", stiffness: 100, damping: 20 }}
-      className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border/40"
-    >
+    <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border/40">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3">
-          <Image src="/icon.png" alt="SpendWise Logo" width={40} height={40} className="rounded-xl" />
+          <img src="/icon.png" alt="SpendWise Logo" width={40} height={40} className="rounded-xl object-cover" />
           <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-rose-400">
             SpendWise
           </span>
@@ -33,6 +26,6 @@ export default function Navbar() {
           </a>
         </div>
       </div>
-    </motion.nav>
+    </nav>
   );
 }
