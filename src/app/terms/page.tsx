@@ -1,56 +1,87 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Terms of Service | SpendWise',
-  description: 'Terms of Service for SpendWise App',
+  description: 'Comprehensive Terms of Service and Trademark Information for SpendWise.',
 };
 
 export default function TermsOfService() {
   return (
-    <div className="max-w-4xl mx-auto px-6 py-20">
-      <div className="prose prose-invert prose-emerald max-w-none">
-        <h1 className="text-4xl md:text-5xl font-extrabold mb-8">Terms of Service</h1>
-        <p className="text-muted-foreground mb-12">Last updated: June 30, 2026</p>
+    <div className="max-w-4xl mx-auto px-6 py-24 md:py-32">
+      <div className="mb-12 border-b border-border/40 pb-8">
+        <h1 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight">Terms of Service & Trademarks</h1>
+        <p className="text-muted-foreground text-lg">Last Updated: {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</p>
+      </div>
 
-        <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-4">1. Agreement to Terms</h2>
-          <p className="text-muted-foreground leading-relaxed mb-4">
-            By accessing or using the SpendWise mobile application and website, you agree to be bound by these Terms of Service. If you disagree with any part of the terms, then you may not access the Service.
-          </p>
-        </section>
-
-        <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-4">2. Description of Service</h2>
-          <p className="text-muted-foreground leading-relaxed mb-4">
-            SpendWise is an AI-powered financial tracking application that allows users to log expenses, track budgets, and receive automated financial insights. We do not act as a financial advisor, broker, or bank. The insights provided by our AI are for informational purposes only.
-          </p>
-        </section>
-
-        <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-4">3. User Accounts</h2>
-          <p className="text-muted-foreground leading-relaxed mb-4">
-            When you create an account with us, you must provide information that is accurate, complete, and current at all times. Failure to do so constitutes a breach of the Terms, which may result in immediate termination of your account on our Service. You are responsible for safeguarding the password that you use to access the Service and for any activities or actions under your password.
-          </p>
-        </section>
-
-        <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-4">4. Limitation of Liability</h2>
-          <p className="text-muted-foreground leading-relaxed">
-            In no event shall SpendWise, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from (i) your access to or use of or inability to access or use the Service; (ii) any conduct or content of any third party on the Service.
-          </p>
-        </section>
+      <div className="space-y-12 text-muted-foreground leading-relaxed prose prose-invert prose-p:text-muted-foreground prose-headings:text-foreground">
         
-        <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-4">5. Changes</h2>
-          <p className="text-muted-foreground leading-relaxed">
-            We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material we will try to provide at least 30 days notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.
+        <section>
+          <h2 className="text-2xl font-bold mb-4 text-foreground">1. Acceptance of Terms</h2>
+          <p>
+            By accessing, downloading, or using the SpendWise mobile application, website, and related services (collectively, the "Services"), you agree to be bound by these Terms of Service. If you do not agree to all the terms and conditions of this agreement, then you may not access the website or use any services.
           </p>
         </section>
 
         <section>
-          <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
-          <p className="text-muted-foreground leading-relaxed">
-            If you have any questions about these Terms, please contact us at <a href="mailto:spendwiseapp@gmail.com" className="text-primary hover:underline">spendwiseapp@gmail.com</a>.
+          <h2 className="text-2xl font-bold mb-4 text-foreground">2. Description of Service</h2>
+          <p>
+            SpendWise is a personal finance management tool that allows users to track expenses, organize budgets, and utilize Artificial Intelligence features (including receipt scanning and AI-driven financial insights). We reserve the right to modify, suspend, or discontinue any part of the Services at any time without prior notice.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold mb-4 text-foreground">3. Financial Disclaimer (Not Professional Advice)</h2>
+          <p>
+            The information, analysis, and AI-generated responses provided by SpendWise are strictly for educational and informational purposes only. <strong>SpendWise is NOT a certified financial planner, investment advisor, or legal/tax professional.</strong> 
+          </p>
+          <p className="mt-4">
+            Any financial insights or budgeting suggestions generated by our AI should not be construed as professional financial advice. You are solely responsible for your financial decisions. We strongly recommend consulting with a licensed financial professional before making significant financial commitments.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold mb-4 text-foreground">4. User Responsibilities & Acceptable Use</h2>
+          <p className="mb-4">When using our Services, you agree not to:</p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Use the Services for any illegal or unauthorized purpose.</li>
+            <li>Attempt to reverse-engineer, decompile, or hack the application or its AI models.</li>
+            <li>Upload receipts or images that contain malicious code, highly sensitive illicit material, or content that violates third-party rights.</li>
+            <li>Abuse the AI chat feature by spamming or attempting to bypass safety filters.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold mb-4 text-foreground">5. Intellectual Property & Trademark Declaration</h2>
+          <p>
+            The SpendWise name, the SpendWise logo, and all related names, logos, product and service names, designs, and slogans are trademarks of SpendWise or its affiliates or licensors. You must not use such marks without our prior written permission.
+          </p>
+          <p className="mt-4">
+            All original content, features, and functionality within the app (including custom UI designs, AI prompt architectures, and software code) are owned by SpendWise and are protected by international copyright, trademark, patent, trade secret, and other intellectual property or proprietary rights laws.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold mb-4 text-foreground">6. Limitation of Liability</h2>
+          <p>
+            In no event shall SpendWise, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from (i) your access to or use of or inability to access or use the Service; (ii) any conduct or content of any third party on the Service; (iii) any content obtained from the Service, including AI-generated hallucinations or incorrect financial calculations.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold mb-4 text-foreground">7. Changes to Terms</h2>
+          <p>
+            We reserve the right, at our sole discretion, to modify or replace these Terms at any time. What constitutes a material change will be determined at our sole discretion. By continuing to access or use our Service after those revisions become effective, you agree to be bound by the revised terms.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold mb-4 text-foreground">8. Contact Information</h2>
+          <p>
+            If you have any questions about these Terms, licensing, or trademark inquiries, please contact our legal department at:
+          </p>
+          <p className="mt-4 font-semibold">
+            Email: <a href="mailto:spendwiseapp@gmail.com" className="text-primary hover:underline">spendwiseapp@gmail.com</a>
           </p>
         </section>
       </div>

@@ -25,24 +25,22 @@ export default function PrivacyPolicy() {
 
         <section>
           <h2 className="text-2xl font-bold mb-4 text-foreground">2. Information We Collect</h2>
-          <p className="mb-4">We collect information to provide better services to all our users. The types of data we collect include:</p>
+          <p className="mb-4">We strictly collect only the information necessary to operate SpendWise. The types of data we collect include:</p>
           <ul className="list-disc pl-6 space-y-2">
-            <li><strong>Account Information:</strong> If you create an account, we may collect your email address, name, and encrypted authentication tokens.</li>
+            <li><strong>Account Information:</strong> Your email address and basic profile information used for secure authentication.</li>
             <li><strong>Financial Data:</strong> Transactions, budgets, and manual expense entries you input into the app.</li>
-            <li><strong>Camera & Image Data:</strong> When you use our "Smart Scanner" feature, we process images of your receipts. These images are temporarily processed by our AI and are not permanently stored unless explicitly requested by you.</li>
-            <li><strong>Usage Data:</strong> We automatically collect diagnostic data, app interaction metrics, and crash reports to improve app stability.</li>
-            <li><strong>Device Information:</strong> Hardware model, operating system version, and unique device identifiers for security purposes.</li>
+            <li><strong>Receipt Images:</strong> When you manually attach a picture to a transaction or use the "Smart Scanner", the image is securely stored in our cloud storage provider (Cloudinary) so it remains permanently attached to your transaction record for your reference.</li>
+            <li><strong>Device Permissions:</strong> We request access to your device's Camera (strictly for capturing receipts) and Notifications (for budget alerts). We do <strong>not</strong> collect background hardware diagnostics, device identifiers, or hidden usage analytics.</li>
           </ul>
         </section>
 
         <section>
           <h2 className="text-2xl font-bold mb-4 text-foreground">3. How We Use Your Information</h2>
-          <p className="mb-4">We use the collected information for the following purposes:</p>
+          <p className="mb-4">We use the collected information for the following specific purposes:</p>
           <ul className="list-disc pl-6 space-y-2">
-            <li><strong>To Provide the Service:</strong> Enabling you to track expenses, manage offline wallets, and receive AI-driven financial insights.</li>
-            <li><strong>AI Processing:</strong> Your transaction data and receipt images are processed using advanced Artificial Intelligence models (such as Google Gemini) strictly to categorize expenses and provide automated financial advice.</li>
-            <li><strong>Service Improvement:</strong> Analyzing usage trends to build new features and fix bugs.</li>
-            <li><strong>Communication:</strong> Sending you security alerts, account updates, and support messages.</li>
+            <li><strong>To Provide the Service:</strong> Enabling you to track expenses, manage wallets, and view your historical transactions alongside their attached Cloudinary receipt images.</li>
+            <li><strong>AI Processing:</strong> Your transaction data and scanned receipt images are processed using advanced Artificial Intelligence models (primarily Google Gemini, with Groq utilized as a secure fallback system). This allows us to instantly extract totals, categorize expenses, and power the AI financial chat.</li>
+            <li><strong>Communication:</strong> Sending you necessary security alerts, account updates, and push notifications for your budget.</li>
           </ul>
         </section>
 
