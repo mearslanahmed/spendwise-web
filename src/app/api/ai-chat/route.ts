@@ -2,10 +2,16 @@ import { NextResponse } from 'next/server';
 import { GoogleGenAI } from '@google/genai';
 
 export async function POST(request: Request) {
+  let body;
   try {
-    const body = await request.json();
-    const { messages, systemInstruction, tools } = body;
+    body = await request.json();
+  } catch (e) {
+    return NextResponse.json({ error: 'Invalid request body' }, { status: 400 });
+  }
+  
+  const { messages, systemInstruction, tools } = body;
 
+  try {
     const apiKey = process.env.GEMINI_API_KEY;
     
     if (!apiKey) {
@@ -37,7 +43,6 @@ export async function POST(request: Request) {
          return NextResponse.json({ error: "Fallback AI configuration is missing." }, { status: 500 });
       }
 
-      const { messages, systemInstruction, tools } = body;
       
       const groqMessages = [
         { role: "system", content: systemInstruction },
