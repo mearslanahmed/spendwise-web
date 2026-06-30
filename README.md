@@ -74,7 +74,8 @@ To view the React Native mobile codebase, please visit the main app repository.
 ## 👨‍💻 Developer
 
 **Arslan Ahmed**
-- Email: [spendwiseoffical@gmail.com](mailto:spendwiseoffical@gmail.com)
+- Business & Freelance Inquiries: [arslanahmednaseem@gmail.com](mailto:arslanahmednaseem@gmail.com)
+- App Support: [spendwiseoffical@gmail.com](mailto:spendwiseoffical@gmail.com)
 - GitHub: [@mearslanahmed](https://github.com/mearslanahmed)
 
 ## 📄 License
