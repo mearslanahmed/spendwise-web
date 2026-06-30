@@ -18,8 +18,31 @@ import Footer from "@/components/layout/Footer";
 export const metadata: Metadata = {
   title: "SpendWise | Smart Expense Tracker",
   description: "Track your expenses effortlessly, snap receipts instantly, and unlock your path to financial freedom with smart automation.",
+  metadataBase: new URL('https://spendwiseapp.tech'),
   icons: {
     icon: '/icon.png',
+  },
+  openGraph: {
+    title: 'SpendWise | Smart Expense Tracker',
+    description: 'Track your expenses effortlessly, snap receipts instantly, and unlock your path to financial freedom with smart automation.',
+    url: 'https://spendwiseapp.tech',
+    siteName: 'SpendWise',
+    images: [
+      {
+        url: '/icon.png', // Ideally this would be an og-image.png, but icon.png works for now
+        width: 512,
+        height: 512,
+        alt: 'SpendWise Logo',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'SpendWise | Smart Expense Tracker',
+    description: 'Track your expenses effortlessly, snap receipts instantly, and unlock your path to financial freedom with smart automation.',
+    images: ['/icon.png'],
   },
 };
 

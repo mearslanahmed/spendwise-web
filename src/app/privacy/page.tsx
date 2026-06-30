@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Privacy Policy | SpendWise',
@@ -19,7 +18,7 @@ export default function PrivacyPolicy() {
         <section>
           <h2 className="text-2xl font-bold mb-4 text-foreground">1. Introduction & Proper Declaration</h2>
           <p>
-            SpendWise ("we," "our," or "us") is committed to protecting your privacy and ensuring complete transparency regarding how we handle your personal and financial data. This comprehensive Privacy Policy governs your use of the SpendWise mobile application and website. By using our services, you consent to the data practices described in this statement.
+            SpendWise (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is committed to protecting your privacy and ensuring complete transparency regarding how we handle your personal and financial data. This comprehensive Privacy Policy governs your use of the SpendWise mobile application and website. By using our services, you consent to the data practices described in this statement.
           </p>
         </section>
 
@@ -29,8 +28,8 @@ export default function PrivacyPolicy() {
           <ul className="list-disc pl-6 space-y-2">
             <li><strong>Account Information:</strong> Your email address and basic profile information used for secure authentication.</li>
             <li><strong>Financial Data:</strong> Transactions, budgets, and manual expense entries you input into the app.</li>
-            <li><strong>Receipt Images:</strong> When you manually attach a picture to a transaction or use the "Smart Scanner", the image is securely stored in our cloud storage provider (Cloudinary) so it remains permanently attached to your transaction record for your reference.</li>
-            <li><strong>Device Permissions:</strong> We request access to your device's Camera (strictly for capturing receipts) and Notifications (for budget alerts). We do <strong>not</strong> collect background hardware diagnostics, device identifiers, or hidden usage analytics.</li>
+            <li><strong>Receipt Images:</strong> When you manually attach a picture to a transaction or use the &quot;Smart Scanner&quot;, the image is securely stored in our cloud storage provider (Cloudinary) so it remains permanently attached to your transaction record for your reference.</li>
+            <li><strong>Device Permissions:</strong> We request access to your device&apos;s Camera (strictly for capturing receipts) and Notifications (for budget alerts). We do <strong>not</strong> collect background hardware diagnostics, device identifiers, or hidden usage analytics.</li>
           </ul>
         </section>
 
@@ -57,7 +56,7 @@ export default function PrivacyPolicy() {
             We retain your personal data only for as long as necessary to fulfill the purposes outlined in this Privacy Policy. You have the absolute right to request the permanent deletion of your account and all associated data at any time. 
           </p>
           <p className="mt-4">
-            <strong>How to delete your data:</strong> You can delete your account directly within the SpendWise app settings. Alternatively, you may submit an out-of-app deletion request by emailing us at <a href="mailto:spendwiseapp@gmail.com" className="text-primary hover:underline">spendwiseapp@gmail.com</a> with the subject "Account Deletion Request". Upon verification, we will scrub all your personal and financial data from our active databases within 30 days.
+            <strong>How to delete your data:</strong> You can delete your account directly within the SpendWise app settings. Alternatively, you may submit an out-of-app deletion request by emailing us at <a href="mailto:spendwiseapp@gmail.com" className="text-primary hover:underline">spendwiseapp@gmail.com</a> with the subject &quot;Account Deletion Request&quot;. Upon verification, we will scrub all your personal and financial data from our active databases within 30 days.
           </p>
         </section>
 
