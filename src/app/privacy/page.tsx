@@ -56,7 +56,7 @@ export default function PrivacyPolicy() {
             We retain your personal data only for as long as necessary to fulfill the purposes outlined in this Privacy Policy. You have the absolute right to request the permanent deletion of your account and all associated data at any time. 
           </p>
           <p className="mt-4">
-            <strong>How to delete your data:</strong> You can delete your account directly within the SpendWise app settings. Alternatively, you may submit an out-of-app deletion request by emailing us at <a href="mailto:spendwiseapp@gmail.com" className="text-primary hover:underline">spendwiseapp@gmail.com</a> with the subject &quot;Account Deletion Request&quot;. Upon verification, we will scrub all your personal and financial data from our active databases within 30 days.
+            <strong>How to delete your data:</strong> You can delete your account directly within the SpendWise app settings. Alternatively, you may submit an out-of-app deletion request by emailing us at <a href="mailto:spendwiseoffical@gmail.com" className="text-primary hover:underline">spendwiseoffical@gmail.com</a> with the subject &quot;Account Deletion Request&quot;. Upon verification, we will scrub all your personal and financial data from our active databases within 30 days.
           </p>
         </section>
 
@@ -84,7 +84,7 @@ export default function PrivacyPolicy() {
             If you have any detailed questions about this Privacy Policy, the practices of this app, or data compliance requests, please contact our Data Protection Officer at:
           </p>
           <p className="mt-4 font-semibold">
-            Email: <a href="mailto:spendwiseapp@gmail.com" className="text-primary hover:underline">spendwiseapp@gmail.com</a>
+            Email: <a href="mailto:spendwiseoffical@gmail.com" className="text-primary hover:underline">spendwiseoffical@gmail.com</a>
           </p>
         </section>
       </div>

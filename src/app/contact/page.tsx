@@ -18,35 +18,43 @@ export default function ContactUs() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
         <div className="bg-zinc-900/50 p-8 rounded-3xl border border-border/50 hover:border-primary/50 transition-colors group">
-          <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center mb-6">
-            <Mail className="text-primary" size={24} />
+          <div className="flex items-center gap-4 mb-6">
+            <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
+              <Mail className="w-6 h-6 text-primary" />
+            </div>
+            <div>
+              <h2 className="text-xl font-bold text-foreground">General Support</h2>
+              <a 
+                href="mailto:spendwiseoffical@gmail.com" 
+                className="text-primary hover:underline block mt-1"
+              >
+                spendwiseoffical@gmail.com
+              </a>
+            </div>
           </div>
-          <h2 className="text-2xl font-bold mb-4">Email Support</h2>
-          <p className="text-muted-foreground mb-6">
+          <p className="text-muted-foreground">
             For all general inquiries, technical support, and feedback, please email us directly. We aim to respond within 24 hours.
           </p>
-          <a 
-            href="mailto:spendwiseapp@gmail.com" 
-            className="inline-flex items-center gap-2 text-primary font-semibold hover:underline"
-          >
-            spendwiseapp@gmail.com
-          </a>
         </div>
 
         <div className="bg-zinc-900/50 p-8 rounded-3xl border border-border/50 hover:border-red-500/50 transition-colors group">
-          <div className="w-12 h-12 bg-red-500/20 rounded-xl flex items-center justify-center mb-6">
-            <UserX className="text-red-500" size={24} />
+          <div className="flex items-center gap-4 mb-6">
+            <div className="w-12 h-12 rounded-full bg-red-500/20 flex items-center justify-center">
+              <UserX className="w-6 h-6 text-red-500" />
+            </div>
+            <div>
+              <h2 className="text-xl font-bold text-foreground">Data & Privacy Requests</h2>
+              <a 
+                href="mailto:spendwiseoffical@gmail.com?subject=Account%20Deletion%20Request" 
+                className="text-primary hover:underline block mt-1"
+              >
+                spendwiseoffical@gmail.com
+              </a>
+            </div>
           </div>
-          <h2 className="text-2xl font-bold mb-4">Account Deletion</h2>
-          <p className="text-muted-foreground mb-6">
+          <p className="text-muted-foreground">
             If you wish to delete your SpendWise account and all associated data without using the app, please send us an email with the subject <strong>"Account Deletion Request"</strong>.
           </p>
-          <a 
-            href="mailto:spendwiseapp@gmail.com?subject=Account%20Deletion%20Request" 
-            className="inline-flex items-center gap-2 text-red-500 font-semibold hover:underline"
-          >
-            Request Deletion
-          </a>
         </div>
       </div>
     </div>

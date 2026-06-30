@@ -81,7 +81,7 @@ export default function TermsOfService() {
             If you have any questions about these Terms, licensing, or trademark inquiries, please contact our legal department at:
           </p>
           <p className="mt-4 font-semibold">
-            Email: <a href="mailto:spendwiseapp@gmail.com" className="text-primary hover:underline">spendwiseapp@gmail.com</a>
+            Email: <a href="mailto:spendwiseoffical@gmail.com" className="text-primary hover:underline">spendwiseoffical@gmail.com</a>
           </p>
         </section>
       </div>
