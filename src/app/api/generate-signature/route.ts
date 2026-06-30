@@ -26,8 +26,7 @@ export async function POST(request: Request) {
     return NextResponse.json({
       signature,
       timestamp,
-      folder,
-      upload_preset,
+      folder
     });
   } catch (error) {
     console.error('Error generating signature:', error);
