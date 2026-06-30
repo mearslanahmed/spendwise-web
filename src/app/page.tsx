@@ -89,6 +89,151 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Features Showcase */}
+      <section id="features" className="py-24 bg-zinc-950">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-20">
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">Financial Intelligence <br /> Built In.</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto text-lg">SpendWise doesn't just track your money—it actively helps you manage it using state-of-the-art AI technology.</p>
+          </div>
+
+          <div className="flex flex-col gap-32">
+            {/* Feature 1: AI Advisor */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+              <motion.div 
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="order-2 md:order-1 relative aspect-[9/19.5] w-full max-w-[300px] mx-auto bg-black rounded-[2.5rem] p-2 shadow-2xl border-[3px] border-zinc-800"
+              >
+                <div className="relative w-full h-full rounded-[2rem] overflow-hidden bg-zinc-900">
+                  <Image src="/ai.jpg" alt="AI Advisor Feature" fill className="object-cover" />
+                </div>
+              </motion.div>
+              <div className="order-1 md:order-2">
+                <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center mb-6 border border-primary/30">
+                  <Sparkles className="text-primary" size={24} />
+                </div>
+                <h3 className="text-3xl font-bold mb-4">Meet your personal AI wealth manager.</h3>
+                <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
+                  Stop guessing where your money went. Our built-in AI analyzes your spending habits in real-time, finds hidden savings, and answers any financial questions you have instantly.
+                </p>
+                <ul className="space-y-3">
+                  <li className="flex items-center gap-3 text-sm font-medium"><ChevronRight className="text-primary" size={18} /> Ask natural language questions</li>
+                  <li className="flex items-center gap-3 text-sm font-medium"><ChevronRight className="text-primary" size={18} /> Automated budget optimization</li>
+                  <li className="flex items-center gap-3 text-sm font-medium"><ChevronRight className="text-primary" size={18} /> Direct action execution</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Feature 2: Smart Scanner */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6 border border-blue-500/30">
+                  <Zap className="text-blue-500" size={24} />
+                </div>
+                <h3 className="text-3xl font-bold mb-4">Instant receipt scanning.</h3>
+                <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
+                  Never manually enter an expense again. Just snap a picture of your receipt and our Vision AI instantly extracts the total, category, and vendor for you.
+                </p>
+                <ul className="space-y-3">
+                  <li className="flex items-center gap-3 text-sm font-medium"><ChevronRight className="text-blue-500" size={18} /> Lightning fast Vision AI</li>
+                  <li className="flex items-center gap-3 text-sm font-medium"><ChevronRight className="text-blue-500" size={18} /> Automatic categorization</li>
+                </ul>
+              </div>
+              <motion.div 
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="relative aspect-[9/19.5] w-full max-w-[300px] mx-auto bg-black rounded-[2.5rem] p-2 shadow-2xl border-[3px] border-zinc-800"
+              >
+                <div className="relative w-full h-full rounded-[2rem] overflow-hidden bg-zinc-900">
+                  <Image src="/scan.jpg" alt="Receipt Scanner" fill className="object-cover" />
+                </div>
+              </motion.div>
+            </div>
+
+            {/* Feature 3: Beautiful Statistics */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+              <motion.div 
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="order-2 md:order-1 relative aspect-[9/19.5] w-full max-w-[300px] mx-auto bg-black rounded-[2.5rem] p-2 shadow-2xl border-[3px] border-zinc-800"
+              >
+                <div className="relative w-full h-full rounded-[2rem] overflow-hidden bg-zinc-900">
+                  <Image src="/stats.jpg" alt="Statistics" fill className="object-cover" />
+                </div>
+              </motion.div>
+              <div className="order-1 md:order-2">
+                <div className="w-12 h-12 bg-emerald-500/20 rounded-xl flex items-center justify-center mb-6 border border-emerald-500/30">
+                  <ShieldCheck className="text-emerald-500" size={24} />
+                </div>
+                <h3 className="text-3xl font-bold mb-4">Deep insights at a glance.</h3>
+                <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
+                  Understand your money with gorgeous, easy-to-read charts. Track your net worth, see exactly which categories drain your budget, and set realistic saving goals.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How it Works Section */}
+      <section id="how-it-works" className="py-24 bg-background">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-20">
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">Financial freedom in 3 simple steps.</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto text-lg">No complicated spreadsheets or linking bank accounts required. Start managing your money safely in seconds.</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Step 1 */}
+            <div className="bg-zinc-900/50 p-8 rounded-3xl border border-border/50 text-center relative overflow-hidden group">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-rose-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-primary">1</div>
+              <h3 className="text-xl font-bold mb-3">Add Your Wallets</h3>
+              <p className="text-muted-foreground">Create offline wallets for your cash, credit cards, and checking accounts. No bank credentials needed.</p>
+            </div>
+            
+            {/* Step 2 */}
+            <div className="bg-zinc-900/50 p-8 rounded-3xl border border-border/50 text-center relative overflow-hidden group">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="w-16 h-16 bg-blue-500/10 rounded-2xl flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-blue-500">2</div>
+              <h3 className="text-xl font-bold mb-3">Track Expenses</h3>
+              <p className="text-muted-foreground">Log transactions manually, or just snap a picture of your receipt and let our AI do the typing.</p>
+            </div>
+
+            {/* Step 3 */}
+            <div className="bg-zinc-900/50 p-8 rounded-3xl border border-border/50 text-center relative overflow-hidden group">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-500 to-teal-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="w-16 h-16 bg-emerald-500/10 rounded-2xl flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-emerald-500">3</div>
+              <h3 className="text-xl font-bold mb-3">Ask the AI</h3>
+              <p className="text-muted-foreground">Chat with your AI advisor to find out where you can save money and hit your financial goals faster.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Bottom CTA */}
+      <section id="download" className="py-32 relative overflow-hidden">
+        <div className="absolute inset-0 bg-primary/10" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] rounded-full bg-primary/20 blur-[150px] -z-10" />
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h2 className="text-4xl md:text-6xl font-extrabold mb-8">Ready to transform your finances?</h2>
+          <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
+            Join thousands of smart spenders who have already taken control of their financial future with SpendWise.
+          </p>
+          <button className="bg-foreground text-background px-10 py-5 rounded-full font-bold text-xl hover:scale-105 transition-transform flex items-center justify-center gap-3 mx-auto shadow-2xl">
+            Get SpendWise Free
+            <ChevronRight size={24} />
+          </button>
+        </div>
+      </section>
+
     </div>
   );
 }
