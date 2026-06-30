@@ -31,8 +31,12 @@ export async function POST(request: Request) {
       },
     });
 
-    // The mobile app expects a specific structure (it expects the whole response object for function calls)
-    return NextResponse.json(response);
+    // Extract getter properties because NextResponse.json won't serialize class getters automatically
+    return NextResponse.json({
+      text: response.text,
+      functionCalls: response.functionCalls,
+      raw: response
+    });
   } catch (error: any) {
     console.error('Primary Gemini 3.5 API Error in Vercel:', error.message || error);
 

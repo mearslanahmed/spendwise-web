@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { GoogleGenAI } from '@google/genai';
+import { GoogleGenAI, Type } from '@google/genai';
 
 export async function POST(request: Request) {
   try {
@@ -27,16 +27,16 @@ export async function POST(request: Request) {
       config: {
         responseMimeType: "application/json",
         responseSchema: {
-          type: "OBJECT",
+          type: Type.OBJECT,
           properties: {
-            isReceipt: { type: "BOOLEAN" },
-            amount: { type: "NUMBER" },
-            category: { type: "STRING" },
-            description: { type: "STRING" },
+            isReceipt: { type: Type.BOOLEAN },
+            amount: { type: Type.NUMBER },
+            category: { type: Type.STRING },
+            description: { type: Type.STRING },
           },
           required: ["isReceipt"],
         },
-      } as any
+      }
     });
 
     const responseText = response.text;
@@ -44,8 +44,9 @@ export async function POST(request: Request) {
       return NextResponse.json(JSON.parse(responseText as string));
     }
     return NextResponse.json({ error: "Failed to parse receipt" }, { status: 500 });
-  } catch (error: any) {
-    console.error("Primary Gemini 3.5 API Error in Vercel:", error.message || error);
+  } catch (error: unknown) {
+    const errorMessage = error instanceof Error ? error.message : error;
+    console.error("Primary Gemini 3.5 API Error in Vercel:", errorMessage);
     
     // Fallback to Groq
     try {
@@ -83,8 +84,9 @@ export async function POST(request: Request) {
         return NextResponse.json(JSON.parse(groqData.choices[0].message.content));
       }
       return NextResponse.json({ error: "Failed to parse Groq response" }, { status: 500 });
-    } catch (groqError: any) {
-      console.error("Fallback Error:", groqError.message || groqError);
+    } catch (groqError: unknown) {
+      const fallbackErrorMessage = groqError instanceof Error ? groqError.message : groqError;
+      console.error("Fallback Error:", fallbackErrorMessage);
       return NextResponse.json({ error: "The AI is currently experiencing high demand. Please enter the details manually for now." }, { status: 503 });
     }
   }

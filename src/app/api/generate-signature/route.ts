@@ -4,7 +4,7 @@ import { v2 as cloudinary } from 'cloudinary';
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { folder = 'spendwise_uploads', upload_preset = 'images' } = body;
+    const { folder = 'spendwise_uploads' } = body;
 
     const apiSecret = process.env.CLOUDINARY_API_SECRET;
     
@@ -19,7 +19,6 @@ export async function POST(request: Request) {
       {
         timestamp,
         folder,
-        upload_preset,
       },
       apiSecret
     );
