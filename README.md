@@ -16,14 +16,24 @@
 
 ---
 
-## ✨ Features
+## Features
 
-- 🌐 **Modern Landing Page:** A stunning, highly-animated dark-mode landing page designed to convert visitors into mobile app users.
-- 🤖 **AI Receipt Processing API:** Exposes an endpoint (`/api/ai-receipt`) that securely processes Cloudinary image URLs using Google Gemini and Groq, feeding structured financial data directly back to the mobile app.
-- 📜 **Legal & Compliance:** Hosts the official, web-accessible Privacy Policy, Terms of Service, and Contact pages required by the Apple App Store and Google Play Store.
-- 🔎 **Technical SEO:** Fully optimized with automatic XML Sitemaps, Robots.txt, and OpenGraph metadata for flawless indexing on Google Search Console and social media previews.
+- **Modern Landing Page:** A stunning, highly-animated dark-mode landing page designed to convert visitors into mobile app users.
+- **AI Receipt Processing API:** Exposes an endpoint (`/api/ai-receipt`) that securely processes Cloudinary image URLs using Google Gemini and Groq, feeding structured financial data directly back to the mobile app.
+- **Legal & Compliance:** Hosts the official, web-accessible Privacy Policy, Terms of Service, and Contact pages required by the Apple App Store and Google Play Store.
+- **Technical SEO:** Fully optimized with automatic XML Sitemaps, Robots.txt, and OpenGraph metadata for flawless indexing on Google Search Console and social media previews.
 
-## 🛠 Tech Stack
+## Screenshots
+
+
+
+| Landing Page | Features | Legal | Contact |
+| :---: | :---: | :---: | :---: |
+| <img src="public/screenshots/landing.png" width="200"> | <img src="public/screenshots/features.png" width="200"> | <img src="public/screenshots/legal.png" width="200"> | <img src="public/screenshots/contact.png" width="200"> |
+
+---
+
+## Tech Stack
 
 - **Framework:** Next.js 15 (App Router)
 - **Styling:** Tailwind CSS (v4) with Framer Motion for buttery-smooth scroll animations.
@@ -33,50 +43,17 @@
 
 ---
 
-## 🚀 Getting Started
-
-### Prerequisites
-- Node.js (v18+)
-
-### Installation
-
-1. **Clone the repository:**
-```bash
-git clone https://github.com/mearslanahmed/spendwise-web.git
-cd spendwise-web
-```
-
-2. **Install dependencies:**
-```bash
-npm install
-```
-
-3. **Configure Environment Variables:**
-Create a `.env.local` file in the root directory:
-```env
-# AI Models
-GEMINI_API_KEY=your_gemini_key
-GROQ_API_KEY=your_groq_key
-```
-
-4. **Run the Development Server:**
-```bash
-npm run dev
-```
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
----
-
-## 📱 Mobile App Repository
+## Mobile App Repository
 This repository powers the backend API for the SpendWise mobile application. 
-To view the React Native mobile codebase, please visit the main app repository.
+To view the source code for the React Native mobile codebase, please visit the main app repository:
+**[GitHub: spendwise-react-native](https://github.com/mearslanahmed/spendwise-react-native)**
 
-## 👨‍💻 Developer
+## Developer
 
 **Arslan Ahmed**
 - Business & Freelance Inquiries: [arslanahmednaseem@gmail.com](mailto:arslanahmednaseem@gmail.com)
 - App Support: [spendwiseoffical@gmail.com](mailto:spendwiseoffical@gmail.com)
 - GitHub: [@mearslanahmed](https://github.com/mearslanahmed)
 
-## 📄 License
+## License
 This project is proprietary. Please refer to our [Privacy Policy](https://spendwiseapp.tech/privacy) and [Terms of Service](https://spendwiseapp.tech/terms) for usage constraints.
