@@ -16,8 +16,11 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "SpendWise | AI-Powered Financial Advisor",
-  description: "Track your expenses, scan receipts, and manage your budget with the power of Artificial Intelligence.",
+  title: "SpendWise | Smart Expense Tracker",
+  description: "Track your expenses effortlessly, snap receipts instantly, and unlock your path to financial freedom with smart automation.",
+  icons: {
+    icon: '/icon.png',
+  },
 };
 
 export default function RootLayout({

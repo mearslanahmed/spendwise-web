@@ -50,7 +50,7 @@ export default function TermsOfService() {
         <section>
           <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
           <p className="text-muted-foreground leading-relaxed">
-            If you have any questions about these Terms, please contact us at support@spendwise-finance.com.
+            If you have any questions about these Terms, please contact us at <a href="mailto:spendwiseapp@gmail.com" className="text-primary hover:underline">spendwiseapp@gmail.com</a>.
           </p>
         </section>
       </div>

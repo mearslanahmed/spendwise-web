@@ -1,59 +1,93 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Privacy Policy | SpendWise',
-  description: 'Privacy Policy for SpendWise App',
+  description: 'Comprehensive Privacy Policy and Data Compliance Declaration for SpendWise.',
 };
 
 export default function PrivacyPolicy() {
   return (
-    <div className="max-w-4xl mx-auto px-6 py-20">
-      <div className="prose prose-invert prose-emerald max-w-none">
-        <h1 className="text-4xl md:text-5xl font-extrabold mb-8">Privacy Policy</h1>
-        <p className="text-muted-foreground mb-12">Last updated: June 30, 2026</p>
+    <div className="max-w-4xl mx-auto px-6 py-24 md:py-32">
+      <div className="mb-12 border-b border-border/40 pb-8">
+        <h1 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight">Privacy Policy & Data Compliance</h1>
+        <p className="text-muted-foreground text-lg">Last Updated: {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</p>
+      </div>
 
-        <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-4">1. Information We Collect</h2>
-          <p className="text-muted-foreground leading-relaxed mb-4">
-            SpendWise collects personal information that you voluntarily provide to us when you register on the App, express an interest in obtaining information about us or our products and Services, when you participate in activities on the App, or otherwise when you contact us.
-          </p>
-          <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-            <li><strong>Personal Information:</strong> We collect email addresses; passwords; and other similar information for authentication via Firebase.</li>
-            <li><strong>Financial Data:</strong> Transaction data you enter is stored securely to provide you with insights. We do not connect directly to your bank accounts.</li>
-            <li><strong>Images:</strong> If you use the receipt scanner, we securely process those images to extract expense data.</li>
-          </ul>
-        </section>
-
-        <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-4">2. How We Use Your Information</h2>
-          <p className="text-muted-foreground leading-relaxed mb-4">
-            We use personal information collected via our App for a variety of business purposes described below:
-          </p>
-          <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-            <li>To facilitate account creation and logon process.</li>
-            <li>To provide AI-powered financial advice and analysis based on your data.</li>
-            <li>To improve our App, services, and user experience.</li>
-          </ul>
-        </section>
-
-        <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-4">3. Will Your Information be Shared?</h2>
-          <p className="text-muted-foreground leading-relaxed">
-            We only share information with your consent, to comply with laws, to provide you with services, to protect your rights, or to fulfill business obligations. Specifically, we may use third-party AI services (like Google Gemini or Groq) to process your data and provide financial insights. We ensure these providers maintain strict data privacy standards.
-          </p>
-        </section>
+      <div className="space-y-12 text-muted-foreground leading-relaxed prose prose-invert prose-p:text-muted-foreground prose-headings:text-foreground">
         
-        <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-4">4. Security of Your Information</h2>
-          <p className="text-muted-foreground leading-relaxed">
-            We use industry-standard security measures (including Firebase Authentication and secure database rules) to protect your personal information. However, despite our safeguards and efforts to secure your information, no electronic transmission over the Internet or information storage technology can be guaranteed to be 100% secure.
+        <section>
+          <h2 className="text-2xl font-bold mb-4 text-foreground">1. Introduction & Proper Declaration</h2>
+          <p>
+            SpendWise ("we," "our," or "us") is committed to protecting your privacy and ensuring complete transparency regarding how we handle your personal and financial data. This comprehensive Privacy Policy governs your use of the SpendWise mobile application and website. By using our services, you consent to the data practices described in this statement.
           </p>
         </section>
 
         <section>
-          <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
-          <p className="text-muted-foreground leading-relaxed">
-            If you have questions or comments about this notice, you may email us at privacy@spendwise-finance.com.
+          <h2 className="text-2xl font-bold mb-4 text-foreground">2. Information We Collect</h2>
+          <p className="mb-4">We collect information to provide better services to all our users. The types of data we collect include:</p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li><strong>Account Information:</strong> If you create an account, we may collect your email address, name, and encrypted authentication tokens.</li>
+            <li><strong>Financial Data:</strong> Transactions, budgets, and manual expense entries you input into the app.</li>
+            <li><strong>Camera & Image Data:</strong> When you use our "Smart Scanner" feature, we process images of your receipts. These images are temporarily processed by our AI and are not permanently stored unless explicitly requested by you.</li>
+            <li><strong>Usage Data:</strong> We automatically collect diagnostic data, app interaction metrics, and crash reports to improve app stability.</li>
+            <li><strong>Device Information:</strong> Hardware model, operating system version, and unique device identifiers for security purposes.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold mb-4 text-foreground">3. How We Use Your Information</h2>
+          <p className="mb-4">We use the collected information for the following purposes:</p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li><strong>To Provide the Service:</strong> Enabling you to track expenses, manage offline wallets, and receive AI-driven financial insights.</li>
+            <li><strong>AI Processing:</strong> Your transaction data and receipt images are processed using advanced Artificial Intelligence models (such as Google Gemini) strictly to categorize expenses and provide automated financial advice.</li>
+            <li><strong>Service Improvement:</strong> Analyzing usage trends to build new features and fix bugs.</li>
+            <li><strong>Communication:</strong> Sending you security alerts, account updates, and support messages.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold mb-4 text-foreground">4. Data Sharing & Third-Party Disclosure</h2>
+          <p>
+            We do not sell, trade, or rent your personal identification information to others. We may share generic aggregated demographic information not linked to any personal identification information regarding visitors and users with our business partners. We may use third-party service providers (such as cloud hosting and AI API providers) to help us operate our business, provided that these third parties agree to keep this information confidential and secure in compliance with industry-standard data protection protocols.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold mb-4 text-foreground">5. Data Retention & Deletion</h2>
+          <p>
+            We retain your personal data only for as long as necessary to fulfill the purposes outlined in this Privacy Policy. You have the absolute right to request the permanent deletion of your account and all associated data at any time. 
+          </p>
+          <p className="mt-4">
+            <strong>How to delete your data:</strong> You can delete your account directly within the SpendWise app settings. Alternatively, you may submit an out-of-app deletion request by emailing us at <a href="mailto:spendwiseapp@gmail.com" className="text-primary hover:underline">spendwiseapp@gmail.com</a> with the subject "Account Deletion Request". Upon verification, we will scrub all your personal and financial data from our active databases within 30 days.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold mb-4 text-foreground">6. Security & Data Protection Compliance</h2>
+          <p>
+            We adopt strict data collection, storage, processing practices, and security measures to protect against unauthorized access, alteration, disclosure, or destruction of your personal information. Financial data transmitted between your device and our servers is secured using TLS/SSL encryption. While no method of electronic storage is 100% secure, we implement commercially acceptable means to protect your personal information.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold mb-4 text-foreground">7. User Rights (GDPR / CCPA)</h2>
+          <p className="mb-4">Depending on your jurisdiction, you may have the following rights regarding your data:</p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li><strong>Right to Access:</strong> You can request a copy of the personal data we hold about you.</li>
+            <li><strong>Right to Rectification:</strong> You can request that we correct any inaccurate data.</li>
+            <li><strong>Right to Erasure (Right to be Forgotten):</strong> You can request the total deletion of your data.</li>
+            <li><strong>Right to Restrict Processing:</strong> You can ask us to suspend the processing of your personal data.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold mb-4 text-foreground">8. Contact Us</h2>
+          <p>
+            If you have any detailed questions about this Privacy Policy, the practices of this app, or data compliance requests, please contact our Data Protection Officer at:
+          </p>
+          <p className="mt-4 font-semibold">
+            Email: <a href="mailto:spendwiseapp@gmail.com" className="text-primary hover:underline">spendwiseapp@gmail.com</a>
           </p>
         </section>
       </div>
