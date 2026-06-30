@@ -79,6 +79,11 @@ export async function POST(request: Request) {
       });
 
       const groqData = await groqResponse.json();
+      
+      if (!groqResponse.ok || groqData.error) {
+        throw new Error(groqData.error?.message || "Groq API Error");
+      }
+
       return NextResponse.json({ groqFallback: true, data: groqData });
     } catch (fallbackError: any) {
       console.error("Fallback AI Service Error:", fallbackError.message || fallbackError);
