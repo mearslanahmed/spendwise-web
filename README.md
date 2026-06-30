@@ -27,9 +27,17 @@
 
 
 
-| Landing Page | Features | Legal | Contact |
-| :---: | :---: | :---: | :---: |
-| <img src="public/screenshots/landing.png" width="200"> | <img src="public/screenshots/features.png" width="200"> | <img src="public/screenshots/legal.png" width="200"> | <img src="public/screenshots/contact.png" width="200"> |
+### Landing Page
+<img src="public/screenshots/landing.png" width="100%">
+
+### Features
+<img src="public/screenshots/features.png" width="100%">
+
+### Legal & Compliance
+<img src="public/screenshots/legal.png" width="100%">
+
+### Contact Support
+<img src="public/screenshots/contact.png" width="100%">
 
 ---
 
