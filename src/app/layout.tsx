@@ -16,15 +16,16 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "SpendWise | Smart Expense Tracker",
-  description: "Track your expenses effortlessly, snap receipts instantly, and unlock your path to financial freedom with smart automation.",
+  title: "SpendWise | AI Expense Tracker & Budget Planner",
+  description: "The ultimate AI-powered personal finance manager. Automate your budget, scan receipts instantly with Vision AI, and achieve financial freedom without linking your bank.",
+  keywords: ["AI budget planner", "automated expense tracker", "receipt scanner app", "personal finance manager", "offline wallet tracker", "budgeting app without bank link", "AI wealth manager"],
   metadataBase: new URL('https://spendwiseapp.tech'),
   icons: {
     icon: '/icon.png',
   },
   openGraph: {
-    title: 'SpendWise | Smart Expense Tracker',
-    description: 'Track your expenses effortlessly, snap receipts instantly, and unlock your path to financial freedom with smart automation.',
+    title: 'SpendWise | AI Expense Tracker & Budget Planner',
+    description: 'Automate your budget, scan receipts instantly with Vision AI, and achieve financial freedom without linking your bank.',
     url: 'https://spendwiseapp.tech',
     siteName: 'SpendWise',
     images: [

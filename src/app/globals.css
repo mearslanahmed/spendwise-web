@@ -15,8 +15,6 @@
   --color-muted-foreground: var(--muted-foreground);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
-  --color-destructive: var(--destructive);
-  --color-destructive-foreground: var(--destructive-foreground);
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
@@ -25,48 +23,34 @@
 
 @layer base {
   :root {
-    --background: hsl(0 0% 100%);
-    --foreground: hsl(222.2 84% 4.9%);
-    --card: hsl(0 0% 100%);
-    --card-foreground: hsl(222.2 84% 4.9%);
-    --popover: hsl(0 0% 100%);
-    --popover-foreground: hsl(222.2 84% 4.9%);
+    /* Premium Deep Dark Theme (Zinc-based) */
+    --background: hsl(240 10% 4%);
+    --foreground: hsl(0 0% 98%);
+    
+    --card: hsl(240 10% 6%);
+    --card-foreground: hsl(0 0% 98%);
+    
+    --popover: hsl(240 10% 4%);
+    --popover-foreground: hsl(0 0% 98%);
+    
+    /* Vibrant Rose/Pink Primary */
     --primary: hsl(346.8 77.2% 49.8%);
-    --primary-foreground: hsl(355.7 100% 97.3%);
-    --secondary: hsl(210 40% 96.1%);
-    --secondary-foreground: hsl(222.2 47.4% 11.2%);
-    --muted: hsl(210 40% 96.1%);
-    --muted-foreground: hsl(215.4 16.3% 46.9%);
-    --accent: hsl(210 40% 96.1%);
-    --accent-foreground: hsl(222.2 47.4% 11.2%);
-    --destructive: hsl(0 84.2% 60.2%);
-    --destructive-foreground: hsl(210 40% 98%);
-    --border: hsl(214.3 31.8% 91.4%);
-    --input: hsl(214.3 31.8% 91.4%);
-    --ring: hsl(346.8 77.2% 49.8%);
-    --radius: 0.5rem;
-  }
- 
-  .dark {
-    --background: hsl(20 14.3% 4.1%);
-    --foreground: hsl(0 0% 95%);
-    --card: hsl(24 9.8% 10%);
-    --card-foreground: hsl(0 0% 95%);
-    --popover: hsl(0 0% 9%);
-    --popover-foreground: hsl(0 0% 95%);
-    --primary: hsl(346.8 77.2% 49.8%);
-    --primary-foreground: hsl(355.7 100% 97.3%);
-    --secondary: hsl(240 3.7% 15.9%);
+    --primary-foreground: hsl(0 0% 100%);
+    
+    --secondary: hsl(240 5% 15%);
     --secondary-foreground: hsl(0 0% 98%);
-    --muted: hsl(0 0% 15%);
-    --muted-foreground: hsl(240 5% 64.9%);
-    --accent: hsl(12 6.5% 15.1%);
+    
+    --muted: hsl(240 5% 15%);
+    --muted-foreground: hsl(240 5% 65%);
+    
+    --accent: hsl(240 5% 15%);
     --accent-foreground: hsl(0 0% 98%);
-    --destructive: hsl(0 62.8% 30.6%);
-    --destructive-foreground: hsl(0 85.7% 97.3%);
-    --border: hsl(240 3.7% 15.9%);
-    --input: hsl(240 3.7% 15.9%);
+    
+    --border: hsl(240 5% 15%);
+    --input: hsl(240 5% 15%);
     --ring: hsl(346.8 77.2% 49.8%);
+    
+    --radius: 1rem;
   }
 }
 
@@ -77,5 +61,8 @@
   body {
     background-color: var(--background);
     color: var(--foreground);
+    /* Improve font rendering for premium feel */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }
