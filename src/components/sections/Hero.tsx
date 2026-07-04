@@ -31,8 +31,14 @@ export default function Hero() {
 
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 mt-8">
             {/* Google Play Badge */}
-            <button className="bg-zinc-900 border border-zinc-800 text-white px-6 py-3 rounded-2xl hover:bg-zinc-800 hover:border-zinc-700 transition-all duration-300 flex items-center gap-3 shadow-lg hover:shadow-[0_0_20px_rgba(59,130,246,0.3)] hover:-translate-y-1">
-              <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <a 
+              href="https://play.google.com/store/apps/details?id=com.spendwise.app&utm_source=website&utm_medium=landing_page"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Download SpendWise on Google Play"
+              className="bg-zinc-900 border border-zinc-800 text-white px-6 py-3 rounded-2xl hover:bg-zinc-800 hover:border-zinc-700 transition-all duration-300 flex items-center gap-3 shadow-lg hover:shadow-[0_0_20px_rgba(59,130,246,0.3)] hover:-translate-y-1"
+            >
+              <svg aria-hidden="true" className="w-8 h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M2.93 2.5C2.65 2.77 2.5 3.16 2.5 3.65V20.35C2.5 20.84 2.65 21.23 2.93 21.5L2.99 21.56L13.11 11.44L13.11 11.32L12.99 11.2L2.99 1.2L2.93 2.5Z" fill="#2196F3"/>
                 <path d="M16.5 14.83L13.11 11.44V11.2L16.5 7.81L16.59 7.86L20.5 10.08C21.6 10.7 21.6 11.72 20.5 12.34L16.59 14.56L16.5 14.83Z" fill="#FFC107"/>
                 <path d="M16.5 14.83L13.11 11.44L2.93 21.62C3.33 22.02 4 22.06 4.79 21.62L16.5 14.83Z" fill="#EA4335"/>
@@ -42,7 +48,7 @@ export default function Hero() {
                 <span className="text-[10px] uppercase tracking-wider text-zinc-400 font-medium leading-none mb-1">Get it on</span>
                 <span className="text-lg font-bold leading-none tracking-tight">Google Play</span>
               </div>
-            </button>
+            </a>
 
             <p className="text-sm text-muted-foreground font-medium flex items-center gap-2">
               <ShieldCheck size={18} className="text-emerald-500" />

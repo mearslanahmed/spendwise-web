@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -21,6 +21,9 @@ export const metadata: Metadata = {
   description: "The ultimate AI-powered personal finance manager. Automate your budget, scan receipts instantly with Vision AI, and achieve financial freedom without linking your bank.",
   keywords: ["AI budget planner", "automated expense tracker", "receipt scanner app", "personal finance manager", "offline wallet tracker", "budgeting app without bank link", "AI wealth manager"],
   metadataBase: new URL('https://spendwiseapp.tech'),
+  alternates: {
+    canonical: '/',
+  },
   icons: {
     icon: '/icon.png',
   },
@@ -48,6 +51,24 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  themeColor: '#09090b',
+  colorScheme: 'dark',
+};
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'SpendWise',
+  operatingSystem: 'ANDROID',
+  applicationCategory: 'FinanceApplication',
+  offers: {
+    '@type': 'Offer',
+    price: '0',
+    priceCurrency: 'USD',
+  },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -55,6 +76,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}>
         <Navbar />
         <main className="min-h-screen pt-20">

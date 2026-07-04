@@ -4,14 +4,18 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function CookieBanner() {
+  const [mounted, setMounted] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     const consent = localStorage.getItem('spendwise_cookie_consent');
     if (!consent) {
       setIsVisible(true);
     }
   }, []);
+
+  if (!mounted) return null;
 
   const acceptCookies = () => {
     localStorage.setItem('spendwise_cookie_consent', 'true');
