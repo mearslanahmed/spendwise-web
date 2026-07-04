@@ -1,21 +1,19 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useSyncExternalStore } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-export default function CookieBanner() {
-  const [mounted, setMounted] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
+const emptySubscribe = () => () => {};
 
-  useEffect(() => {
-    setMounted(true);
-    const consent = localStorage.getItem('spendwise_cookie_consent');
-    if (!consent) {
-      setIsVisible(true);
-    }
-  }, []);
+export default function CookieBanner() {
+  const mounted = useSyncExternalStore(emptySubscribe, () => true, () => false);
+  const [isVisible, setIsVisible] = useState(true);
 
   if (!mounted) return null;
+  
+  const consent = typeof window !== 'undefined' ? localStorage.getItem('spendwise_cookie_consent') : null;
+  if (consent && isVisible) return null;
+
 
   const acceptCookies = () => {
     localStorage.setItem('spendwise_cookie_consent', 'true');
@@ -33,8 +31,9 @@ export default function CookieBanner() {
           className="fixed bottom-0 left-0 right-0 z-50 p-4 md:p-6"
         >
           <div className="max-w-4xl mx-auto bg-zinc-900 border border-zinc-800 shadow-2xl rounded-2xl p-6 flex flex-col md:flex-row items-center justify-between gap-6">
-            <p className="text-sm text-zinc-300 font-light leading-relaxed">
-              We use strictly necessary cookies to make our site work. We'd also like to set optional cookies to help us improve it. We won't set optional cookies unless you enable them. Using this tool will set a cookie on your device to remember your preferences.
+            <p className="text-sm text-zinc-300 flex-1 leading-relaxed">
+              We use cookies to improve your experience, analyze site traffic, and secure your session. We don&apos;t sell your data. 
+              By clicking &quot;Accept&quot;, you consent to our use of cookies.
             </p>
             <div className="flex gap-4 shrink-0">
               <button 

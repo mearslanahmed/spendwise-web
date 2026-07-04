@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
+
 
 export const metadata: Metadata = {
   title: 'Terms of Service | SpendWise',
@@ -19,7 +19,7 @@ export default function TermsOfService() {
         <section>
           <h2 className="text-2xl font-bold mb-4 text-foreground">1. Acceptance of Terms</h2>
           <p>
-            By accessing, downloading, or using the SpendWise mobile application, website, and related services (collectively, the "Services"), you agree to be bound by these Terms of Service. These Services are provided by an independent individual developer. If you do not agree to all the terms and conditions of this agreement, then you may not access the website or use any services.
+            By accessing, downloading, or using the SpendWise mobile application, website, and related services (collectively, the &quot;Services&quot;), you agree to be bound by these Terms of Service. These Services are provided by an independent individual developer. If you do not agree to all the terms and conditions of this agreement, then you may not access the website or use any services.
           </p>
         </section>
 

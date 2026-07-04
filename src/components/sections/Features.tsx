@@ -15,7 +15,7 @@ export default function Features() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-6">Financial Intelligence <br /> Built In.</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">SpendWise doesn't just track your money. It actively helps you manage it using state-of-the-art AI technology.</p>
+          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">SpendWise doesn&apos;t just track your money. It actively helps you manage it using state-of-the-art AI technology.</p>
         </motion.div>
 
         <div className="flex flex-col gap-24">
@@ -66,7 +66,7 @@ export default function Features() {
               </div>
               <h3 className="text-2xl font-bold mb-3 tracking-tight">Say goodbye to tedious manual tracking.</h3>
               <p className="text-muted-foreground font-light leading-relaxed">
-                Life is too short for data entry. Just snap a quick photo of your receipt, and our Vision AI instantly digitizes every detail with 99% accuracy in under 2 seconds. It's almost like magic.
+                Life is too short for data entry. Just snap a quick photo of your receipt, and our Vision AI instantly digitizes every detail with 99% accuracy in under 2 seconds. It&apos;s almost like magic.
               </p>
               <ul className="space-y-3 mt-6">
                 <li className="flex items-center gap-3 text-sm font-medium"><ChevronRight className="text-blue-500" size={18} /> Lightning fast Vision AI</li>
@@ -111,7 +111,7 @@ export default function Features() {
               </div>
               <h3 className="text-2xl font-bold mb-3 tracking-tight">See your money in a whole new light.</h3>
               <p className="text-muted-foreground font-light leading-relaxed">
-                Gorgeous, easy-to-understand charts that show you exactly what's happening with your finances. No confusing jargon, just clear insights to help you grow.
+                Gorgeous, easy-to-understand charts that show you exactly what&apos;s happening with your finances. No confusing jargon, just clear insights to help you grow.
               </p>
             </motion.div>
           </div>

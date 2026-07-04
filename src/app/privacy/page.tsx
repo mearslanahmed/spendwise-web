@@ -18,7 +18,7 @@ export default function PrivacyPolicy() {
         <section>
           <h2 className="text-2xl font-bold mb-4 text-foreground">1. Introduction & Proper Declaration</h2>
           <p>
-            SpendWise ("the App") is developed and maintained by an independent individual developer ("I," "me," or "my"). I am committed to protecting your privacy and ensuring complete transparency regarding how I handle your personal and financial data. This comprehensive Privacy Policy governs your use of the SpendWise mobile application and website. By using the services, you consent to the data practices described in this statement.
+            SpendWise (&quot;the App&quot;) is developed and maintained by an independent individual developer (&quot;I,&quot; &quot;me,&quot; or &quot;my&quot;). I am committed to protecting your privacy and ensuring complete transparency regarding how I handle your personal and financial data. This comprehensive Privacy Policy governs your use of the SpendWise mobile application and website. By using the services, you consent to the data practices described in this statement.
           </p>
         </section>
 
@@ -28,8 +28,8 @@ export default function PrivacyPolicy() {
           <ul className="list-disc pl-6 space-y-2">
             <li><strong>Account Information:</strong> Your email address and basic profile information used for secure authentication via Google Sign-In and Firebase Authentication.</li>
             <li><strong>Financial Data:</strong> Transactions, budgets, and manual expense entries you input into the app. This data is securely synced and backed up to Google Firebase Firestore to allow you cross-device access and data recovery.</li>
-            <li><strong>Receipt Images:</strong> When you manually attach a picture to a transaction or use the "Smart Scanner", the image is securely stored in a cloud storage provider (Cloudinary).</li>
-            <li><strong>Device Permissions:</strong> The app requests access to your device's Camera (strictly for capturing receipts) and Notifications (for budget alerts). I do <strong>not</strong> collect background hardware diagnostics, device identifiers, or hidden usage analytics.</li>
+            <li><strong>Receipt Images:</strong> When you manually attach a picture to a transaction or use the &quot;Smart Scanner&quot;, the image is securely stored in a cloud storage provider (Cloudinary).</li>
+            <li><strong>Device Permissions:</strong> The app requests access to your device&apos;s Camera (strictly for capturing receipts) and Notifications (for budget alerts). I do <strong>not</strong> collect background hardware diagnostics, device identifiers, or hidden usage analytics.</li>
           </ul>
         </section>
 
@@ -56,7 +56,7 @@ export default function PrivacyPolicy() {
             Your personal data is retained only for as long as you keep an active account. You have the absolute right to request the permanent deletion of your account and all associated data from Firebase and Cloudinary at any time. 
           </p>
           <p className="mt-4">
-            <strong>How to delete your data:</strong> You can delete your account directly within the SpendWise app settings. Alternatively, you may submit an out-of-app deletion request by emailing <a href="mailto:spendwiseoffical@gmail.com" className="text-primary hover:underline">spendwiseoffical@gmail.com</a> with the subject "Account Deletion Request". Upon verification, all your personal and financial data will be scrubbed from the databases within 30 days.
+            <strong>How to delete your data:</strong> You can delete your account directly within the SpendWise app settings. Alternatively, you may submit an out-of-app deletion request by emailing <a href="mailto:spendwiseoffical@gmail.com" className="text-primary hover:underline">spendwiseoffical@gmail.com</a> with the subject &quot;Account Deletion Request&quot;. Upon verification, all your personal and financial data will be scrubbed from the databases within 30 days.
           </p>
         </section>
 
@@ -79,7 +79,7 @@ export default function PrivacyPolicy() {
         </section>
 
         <section>
-          <h2 className="text-2xl font-bold mb-4 text-foreground">8. Children's Privacy (COPPA Compliance)</h2>
+          <h2 className="text-2xl font-bold mb-4 text-foreground">8. Children&apos;s Privacy (COPPA Compliance)</h2>
           <p>
             These Services do not address anyone under the age of 13. I do not knowingly collect personally identifiable information from children under 13. In the case I discover that a child under 13 has provided me with personal information, I immediately delete this from the servers. If you are a parent or guardian and you are aware that your child has provided personal information, please contact me so that I will be able to do the necessary actions.
           </p>

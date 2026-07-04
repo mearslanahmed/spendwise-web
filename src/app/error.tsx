@@ -22,8 +22,8 @@ export default function GlobalError({
         <ShieldAlert className="text-rose-500" size={40} />
       </div>
       <h1 className="text-4xl font-bold mb-4 tracking-tight">Something went wrong</h1>
-      <p className="text-zinc-400 text-lg mb-10 max-w-md font-light">
-        We've encountered an unexpected error. Our engineering team has been notified and is looking into it.
+      <p className="text-zinc-400 max-w-md mx-auto text-lg leading-relaxed mb-10">
+        Don&apos;t worry, your data is completely safe. We&apos;ve logged the issue and we&apos;ll get it fixed.
       </p>
       <div className="flex gap-4">
         <button

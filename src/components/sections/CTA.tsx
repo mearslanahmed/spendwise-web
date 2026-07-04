@@ -15,7 +15,7 @@ export default function CTA() {
       >
         <h2 className="text-4xl md:text-6xl font-extrabold mb-8 tracking-tight">Ready to feel good about your money again?</h2>
         <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto font-light leading-relaxed">
-          Don't let another month slip by feeling stressed about your finances. Start finding peace of mind with SpendWise today. It's completely free.
+          Don&apos;t let another month slip by feeling stressed about your finances. Start finding peace of mind with SpendWise today. It&apos;s completely free.
         </p>
         <div className="flex justify-center mt-10">
           <a 

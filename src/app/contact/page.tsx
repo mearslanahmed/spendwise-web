@@ -9,10 +9,10 @@ export const metadata: Metadata = {
 export default function ContactUs() {
   return (
     <div className="max-w-4xl mx-auto px-6 py-24 md:py-32">
-      <div className="mb-16">
+      <div className="mb-16 text-center">
         <h1 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight">Contact Us</h1>
         <p className="text-xl text-muted-foreground">
-          We're here to help you achieve financial freedom. Get in touch with our support team.
+          We&apos;re here to help you achieve financial freedom. Get in touch with our support team.
         </p>
       </div>
 
@@ -53,7 +53,7 @@ export default function ContactUs() {
             </div>
           </div>
           <p className="text-muted-foreground">
-            If you wish to delete your SpendWise account and all associated data without using the app, please send us an email with the subject <strong>"Account Deletion Request"</strong>.
+            If you wish to delete your SpendWise account and all associated data without using the app, please send us an email with the subject <strong>&quot;Account Deletion Request&quot;</strong>.
           </p>
         </div>
       </div>
