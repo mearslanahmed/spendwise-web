@@ -18,7 +18,7 @@ export default function Footer() {
           <Link href="/contact" className="p-2 hover:text-white transition-colors">Contact Support</Link>
         </div>
         
-        <div className="text-sm text-zinc-600 font-medium">
+        <div className="text-sm text-zinc-500 font-medium">
           &copy; {new Date().getFullYear()} SpendWise. All rights reserved.
         </div>
       </div>

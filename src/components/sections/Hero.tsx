@@ -15,12 +15,7 @@ export default function Hero() {
 
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center lg:items-start mb-16 md:mb-24">
         {/* Hero Text */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
-          className="flex flex-col gap-6 lg:mt-8"
-        >
+        <div className="flex flex-col gap-6 lg:mt-8">
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.1] text-balance">
             Stop wondering where your <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-rose-400 to-blue-500 drop-shadow-sm">paycheck went.</span>
           </h1>
@@ -29,7 +24,12 @@ export default function Hero() {
             The average person wastes over $340 a year on forgotten subscriptions. SpendWise uses smart AI to gently catch them for you, so you can finally start saving without the stress. Take the first step toward true financial freedom today.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 mt-8">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 0.1 }}
+            className="flex flex-col sm:flex-row items-start sm:items-center gap-6 mt-8"
+          >
             {/* Google Play Badge */}
             <a 
               href="https://play.google.com/store/apps/details?id=com.spendwise.app&utm_source=website&utm_medium=landing_page"
@@ -54,8 +54,8 @@ export default function Hero() {
               <ShieldCheck size={18} className="text-emerald-500" />
               100% Private & Secure
             </p>
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
 
         {/* Hero Phone Mockup */}
         <motion.div 

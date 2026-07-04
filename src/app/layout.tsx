@@ -24,9 +24,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/',
   },
-  icons: {
-    icon: '/icon.png',
-  },
   openGraph: {
     title: 'SpendWise | AI Expense Tracker & Budget Planner',
     description: 'Automate your budget, scan receipts instantly with Vision AI, and achieve financial freedom without linking your bank.',
