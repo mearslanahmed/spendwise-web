@@ -27,7 +27,7 @@ export default function FAQ() {
             className="bg-white/[0.02] border border-white/5 rounded-2xl p-6 backdrop-blur-sm shadow-lg"
           >
             <h3 className="text-xl font-bold mb-3 flex items-center gap-3"><CheckCircle2 className="text-primary" size={20} /> Is SpendWise secure? Do I need to link my bank?</h3>
-            <p className="text-muted-foreground font-light leading-relaxed pl-8">SpendWise is 100% private and secure. Unlike other budgeting apps, we never ask for your bank credentials. You create offline wallets and log transactions manually or via our secure AI receipt scanner.</p>
+            <p className="text-muted-foreground font-light leading-relaxed pl-8">SpendWise is 100% private and secure. Unlike other budgeting apps, we never ask for your bank credentials. You create manual unlinked wallets and log transactions yourself or via our secure AI receipt scanner.</p>
           </motion.div>
 
           {/* FAQ 2 */}

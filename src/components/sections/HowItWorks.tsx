@@ -29,7 +29,7 @@ export default function HowItWorks() {
               <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-primary to-rose-400">1</span>
             </div>
             <h3 className="text-xl font-bold mb-3">Keep your bank details private</h3>
-            <p className="text-muted-foreground font-light leading-relaxed">We believe your data is yours. Create secure, offline wallets in seconds without ever having to link your actual bank account.</p>
+            <p className="text-muted-foreground font-light leading-relaxed">We believe your data is yours. Create secure, unlinked manual wallets in seconds without ever having to surrender your actual bank credentials.</p>
           </motion.div>
           
           {/* Step 2 */}
