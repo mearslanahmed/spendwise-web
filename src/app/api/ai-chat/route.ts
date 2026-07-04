@@ -1,7 +1,16 @@
 import { NextResponse } from 'next/server';
 import { GoogleGenAI } from '@google/genai';
+import { ratelimit } from '@/lib/ratelimit';
 
 export async function POST(request: Request) {
+  if (ratelimit) {
+    const ip = request.headers.get("x-forwarded-for") ?? "127.0.0.1";
+    const { success } = await ratelimit.limit(`ratelimit_chat_${ip}`);
+    if (!success) {
+      return NextResponse.json({ error: "Too many requests. Please try again later." }, { status: 429 });
+    }
+  }
+
   let body;
   try {
     body = await request.json();
@@ -37,8 +46,9 @@ export async function POST(request: Request) {
       functionCalls: response.functionCalls,
       raw: response
     });
-  } catch (error: any) {
-    console.error('Primary Gemini 3.5 API Error in Vercel:', error.message || error);
+  } catch (error: unknown) {
+    const errorMessage = error instanceof Error ? error.message : String(error);
+    console.error('Primary Gemini 3.5 API Error in Vercel:', errorMessage);
 
     // Fallback to Groq
     try {
@@ -50,7 +60,7 @@ export async function POST(request: Request) {
       
       const groqMessages = [
         { role: "system", content: systemInstruction },
-        ...messages.map((msg: any) => ({
+        ...messages.map((msg: { role: string; parts: { text: string }[] }) => ({
           role: msg.role === 'user' ? 'user' : 'assistant',
           content: msg.parts[0].text
         }))
@@ -89,8 +99,9 @@ export async function POST(request: Request) {
       }
 
       return NextResponse.json({ groqFallback: true, data: groqData });
-    } catch (fallbackError: any) {
-      console.error("Fallback AI Service Error:", fallbackError.message || fallbackError);
+    } catch (fallbackError: unknown) {
+      const fallbackErrorMessage = fallbackError instanceof Error ? fallbackError.message : String(fallbackError);
+      console.error("Fallback AI Service Error:", fallbackErrorMessage);
       return NextResponse.json({ error: "Our AI service is temporarily experiencing high demand." }, { status: 503 });
     }
   }

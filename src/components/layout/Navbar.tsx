@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 export default function Navbar() {
@@ -13,7 +14,9 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3">
-          <img src="/icon.png" alt="SpendWise Logo" width={40} height={40} className="rounded-xl object-cover" />
+          <div className="relative w-10 h-10 rounded-xl overflow-hidden">
+            <Image src="/icon.png" alt="SpendWise Logo" fill sizes="40px" className="object-cover" />
+          </div>
           <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-rose-400">
             SpendWise
           </span>

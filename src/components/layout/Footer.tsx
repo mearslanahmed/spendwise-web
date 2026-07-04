@@ -1,11 +1,14 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
     <footer className="bg-zinc-950 py-12 border-t border-white/5">
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
         <div className="flex items-center gap-3">
-          <img src="/icon.png" alt="SpendWise Logo" width={32} height={32} className="rounded-lg object-cover" />
+          <div className="relative w-8 h-8 rounded-lg overflow-hidden">
+            <Image src="/icon.png" alt="SpendWise Logo" fill sizes="32px" className="object-cover" />
+          </div>
           <span className="text-xl font-bold tracking-tight text-white">SpendWise</span>
         </div>
         

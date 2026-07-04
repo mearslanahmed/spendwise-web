@@ -1,7 +1,16 @@
 import { NextResponse } from 'next/server';
 import { v2 as cloudinary } from 'cloudinary';
+import { ratelimit } from '@/lib/ratelimit';
 
 export async function POST(request: Request) {
+  if (ratelimit) {
+    const ip = request.headers.get("x-forwarded-for") ?? "127.0.0.1";
+    const { success } = await ratelimit.limit(`ratelimit_sig_${ip}`);
+    if (!success) {
+      return NextResponse.json({ error: "Too many requests. Please try again later." }, { status: 429 });
+    }
+  }
+
   try {
     const body = await request.json();
     const { folder = 'spendwise_uploads' } = body;

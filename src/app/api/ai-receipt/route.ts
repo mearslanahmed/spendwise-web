@@ -1,7 +1,16 @@
 import { NextResponse } from 'next/server';
 import { GoogleGenAI, Type } from '@google/genai';
+import { ratelimit } from '@/lib/ratelimit';
 
 export async function POST(request: Request) {
+  if (ratelimit) {
+    const ip = request.headers.get("x-forwarded-for") ?? "127.0.0.1";
+    const { success } = await ratelimit.limit(`ratelimit_receipt_${ip}`);
+    if (!success) {
+      return NextResponse.json({ error: "Too many requests. Please try again later." }, { status: 429 });
+    }
+  }
+
   try {
     const body = await request.json();
     const { prompt, base64Image } = body;
