@@ -18,6 +18,7 @@ export default function CookieBanner() {
   const acceptCookies = () => {
     localStorage.setItem('spendwise_cookie_consent', 'true');
     setIsVisible(false);
+    window.dispatchEvent(new Event('cookieConsentGiven'));
   };
 
   return (

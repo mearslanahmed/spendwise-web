@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import CookieBanner from "@/components/layout/CookieBanner";
+import Analytics from "@/components/layout/Analytics";
 
 export const metadata: Metadata = {
   title: "SpendWise | AI Expense Tracker & Budget Planner",
@@ -86,6 +87,7 @@ export default function RootLayout({
         </main>
         <Footer />
         <CookieBanner />
+        <Analytics measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || ''} />
       </body>
     </html>
   );
