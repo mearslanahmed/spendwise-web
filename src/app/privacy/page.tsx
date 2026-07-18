@@ -29,7 +29,7 @@ export default function PrivacyPolicy() {
             <li><strong>Account Information:</strong> Your email address and basic profile information used for secure authentication via Google Sign-In and Firebase Authentication.</li>
             <li><strong>Financial Data:</strong> Transactions, budgets, and manual expense entries you input into the app. This data is securely synced and backed up to Google Firebase Firestore to allow you cross-device access and data recovery.</li>
             <li><strong>Receipt Images:</strong> When you manually attach a picture to a transaction or use the &quot;Smart Scanner&quot;, the image is securely stored in a cloud storage provider (Cloudinary).</li>
-            <li><strong>Device Permissions:</strong> The app requests access to your device&apos;s Camera (strictly for capturing receipts) and Notifications (for budget alerts). I do <strong>not</strong> collect background hardware diagnostics, device identifiers, or hidden usage analytics.</li>
+            <li><strong>Device Permissions & Analytics:</strong> The app requests access to your device&apos;s Camera (strictly for capturing receipts) and Notifications (for budget alerts). We use Google Analytics for Firebase to collect basic usage data, crash reports, and anonymous device identifiers to improve the app&apos;s stability.</li>
           </ul>
         </section>
 
@@ -38,7 +38,7 @@ export default function PrivacyPolicy() {
           <p className="mb-4">The collected information is used for the following specific purposes:</p>
           <ul className="list-disc pl-6 space-y-2">
             <li><strong>To Provide the Service:</strong> Enabling you to track expenses, manage wallets, and view your historical transactions alongside their attached Cloudinary receipt images across multiple devices via Firebase sync.</li>
-            <li><strong>AI Processing:</strong> Your transaction data and scanned receipt images are processed using advanced Artificial Intelligence models (primarily Google Gemini, with Groq utilized as a secure fallback system). This allows the app to instantly extract totals and categorize expenses.</li>
+            <li><strong>AI Processing:</strong> Your transaction data and scanned receipt images are processed using advanced Artificial Intelligence models (primarily Google Gemini, with Groq utilized as a secure fallback system). This allows the app to instantly extract totals and categorize expenses. <em>Note: AI-generated financial insights are for informational purposes only and do not constitute professional financial advice.</em></li>
             <li><strong>Communication:</strong> Sending you necessary security alerts, account updates, and push notifications for your budget via Expo Notifications.</li>
           </ul>
         </section>
