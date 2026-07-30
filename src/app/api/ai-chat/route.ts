@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { GoogleGenAI } from '@google/genai';
+import Groq from 'groq-sdk';
 import { ratelimit } from '@/lib/ratelimit';
 
 export async function POST(request: Request) {
@@ -32,7 +33,7 @@ export async function POST(request: Request) {
 
     // Send to Gemini
     const response = await ai.models.generateContent({
-      model: 'gemini-3.5-flash',
+      model: 'gemini-3.6-flash',
       contents: messages,
       config: {
         systemInstruction,
@@ -48,13 +49,13 @@ export async function POST(request: Request) {
     });
   } catch (error: unknown) {
     const errorMessage = error instanceof Error ? error.message : String(error);
-    console.error('Primary Gemini 3.5 API Error in Vercel:', errorMessage);
+    console.error('Primary Gemini 3.6 API Error in Vercel:', errorMessage);
 
     // Fallback to Groq
     try {
       const groqApiKey = process.env.GROQ_API_KEY;
       if (!groqApiKey) {
-         return NextResponse.json({ error: "Fallback AI configuration is missing." }, { status: 500 });
+        return NextResponse.json({ error: "Fallback AI configuration is missing." }, { status: 500 });
       }
 
       
@@ -78,25 +79,13 @@ export async function POST(request: Request) {
         }
       ] : undefined;
 
-      const groqResponse = await fetch("https://api.groq.com/openai/v1/chat/completions", {
-        method: "POST",
-        headers: {
-          "Authorization": `Bearer ${groqApiKey}`,
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          model: "meta-llama/llama-4-scout-17b-16e-instruct",
-          messages: groqMessages,
-          tools: groqTools,
-          tool_choice: "auto"
-        })
+      const groq = new Groq({ apiKey: groqApiKey });
+      const groqData = await groq.chat.completions.create({
+        model: "openai/gpt-oss-20b",
+        messages: groqMessages,
+        tools: groqTools as any,
+        tool_choice: "auto"
       });
-
-      const groqData = await groqResponse.json();
-      
-      if (!groqResponse.ok || groqData.error) {
-        throw new Error(groqData.error?.message || "Groq API Error");
-      }
 
       return NextResponse.json({ groqFallback: true, data: groqData });
     } catch (fallbackError: unknown) {

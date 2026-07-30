@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { GoogleGenAI, Type } from '@google/genai';
+import Groq from 'groq-sdk';
 import { ratelimit } from '@/lib/ratelimit';
 
 export async function POST(request: Request) {
@@ -23,7 +24,7 @@ export async function POST(request: Request) {
     const ai = new GoogleGenAI({ apiKey });
 
     const response = await ai.models.generateContent({
-      model: 'gemini-3.5-flash',
+      model: 'gemini-3.6-flash',
       contents: [
         prompt,
         {
@@ -66,29 +67,21 @@ export async function POST(request: Request) {
 
       const { prompt, base64Image } = await request.clone().json();
 
-      const groqResponse = await fetch("https://api.groq.com/openai/v1/chat/completions", {
-        method: "POST",
-        headers: {
-          "Authorization": `Bearer ${groqApiKey}`,
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          model: "meta-llama/llama-4-scout-17b-16e-instruct",
-          messages: [
-            {
-              role: "user",
-              content: [
-                { type: "text", text: prompt },
-                { type: "image_url", image_url: { url: `data:image/jpeg;base64,${base64Image}` } }
-              ]
-            }
-          ],
-          response_format: { type: "json_object" }
-        })
+      const groq = new Groq({ apiKey: groqApiKey });
+      const groqData = await groq.chat.completions.create({
+        model: "openai/gpt-oss-20b",
+        messages: [
+          {
+            role: "user",
+            content: [
+              { type: "text", text: prompt },
+              { type: "image_url", image_url: { url: `data:image/jpeg;base64,${base64Image}` } }
+            ] as any
+          }
+        ],
+        response_format: { type: "json_object" }
       });
 
-      const groqData = await groqResponse.json();
-      
       if (groqData.choices && groqData.choices[0]?.message?.content) {
         return NextResponse.json(JSON.parse(groqData.choices[0].message.content));
       }

@@ -30,7 +30,7 @@ export default function Navbar() {
         </div>
 
         <div>
-          <Link href="/#download" className="bg-zinc-900 border border-zinc-800 text-white px-5 py-2 rounded-full hover:bg-zinc-800 hover:border-zinc-700 transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-[0_0_15px_rgba(59,130,246,0.3)] hover:-translate-y-0.5">
+          <a href="https://play.google.com/store/apps/details?id=com.mearslanahmed.SpendWise" target="_blank" rel="noopener noreferrer" className="bg-zinc-900 border border-zinc-800 text-white px-5 py-2 rounded-full hover:bg-zinc-800 hover:border-zinc-700 transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-[0_0_15px_rgba(59,130,246,0.3)] hover:-translate-y-0.5">
             <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M2.93 2.5C2.65 2.77 2.5 3.16 2.5 3.65V20.35C2.5 20.84 2.65 21.23 2.93 21.5L2.99 21.56L13.11 11.44L13.11 11.32L12.99 11.2L2.99 1.2L2.93 2.5Z" fill="#2196F3"/>
               <path d="M16.5 14.83L13.11 11.44V11.2L16.5 7.81L16.59 7.86L20.5 10.08C21.6 10.7 21.6 11.72 20.5 12.34L16.59 14.56L16.5 14.83Z" fill="#FFC107"/>
@@ -38,7 +38,7 @@ export default function Navbar() {
               <path d="M16.5 7.81L4.79 0.98C4 0.54 3.33 0.58 2.93 0.98L13.11 11.16L16.5 7.81Z" fill="#34A853"/>
             </svg>
             <span className="text-sm font-bold tracking-tight">Download App</span>
-          </Link>
+          </a>
         </div>
       </div>
     </motion.nav>

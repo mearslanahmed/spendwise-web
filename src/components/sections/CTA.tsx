@@ -19,7 +19,7 @@ export default function CTA() {
         </p>
         <div className="flex justify-center mt-10">
           <a 
-            href="https://play.google.com/store/apps/details?id=com.spendwise.app&utm_source=website&utm_medium=landing_page"
+            href="https://play.google.com/store/apps/details?id=com.mearslanahmed.SpendWise&utm_source=website&utm_medium=landing_page"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Download SpendWise on Google Play"
